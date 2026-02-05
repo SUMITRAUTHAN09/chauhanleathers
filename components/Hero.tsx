@@ -88,12 +88,12 @@ export default function Hero() {
             </motion.div>
 
             <motion.div variants={{ hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1 } }}>
-              <Link
-                href="/contact"
+              <a
+                href="tel:+91 7668394656"
                 className="flex items-center gap-2 border border-white/40 text-white font-medium px-6 py-2.5 rounded-xl hover:bg-white/10 transition-all"
               >
                 <Phone size={18} /> Contact Us
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>
