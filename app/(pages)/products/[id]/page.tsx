@@ -42,7 +42,7 @@ export default async function ProductDetail({
   return (
     <div className="bg-white min-h-screen font-serif">
       <Navbar />
-      <div className="max-w-7xl mx-auto py-8 m-7">
+      <div className="max-w-7xl mx-auto py-8 m-12">
         <Link
           href="/products"
           className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#C4956A] transition-colors mb-6"
