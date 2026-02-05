@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div>
       {/* ── hero ── */}
-      <section className="font-serif relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#3D2B1F] via-[#8B6F47] to-[#C4956A] py-16 px-6 m-2 ml-2 mr-2 shadow-xl md:max-w-7xl mx-auto ">
+      <section className="font-serif relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#3D2B1F] via-[#8B6F47] to-[#C4956A] py-16 px-6 m-2 ml-2 mr-2 shadow-xl md:max-w-7xl mx-auto shadow shadow-xl shadow-gray-800 ">
         
         {/* decorative circles */}
         <motion.div
@@ -132,7 +132,7 @@ export default function Hero() {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <ProductCard product={p} delay={i + 1} />
+              <ProductCard product={p} />
             </motion.div>
           ))}
         </motion.div>
@@ -140,7 +140,7 @@ export default function Hero() {
         <div className="flex justify-center mt-10">
           <Link
             href="/products"
-            className="flex items-center gap-1 text-sm text-white font-medium px-6 py-2 rounded-full bg-gradient-to-r from-[#3D2B1F] via-[#8B6F47] to-[#C4956A] hover:gap-2 transition-all"
+            className="flex items-center gap-1 text-sm text-white font-medium px-6 py-2 rounded-full bg-gradient-to-r from-[#3D2B1F] via-[#8B6F47] to-[#C4956A] hover:gap-2 transition-all shadow shadow-gray-800 shadow-xl mb-10"
           >
             View all <ArrowRight size={15} />
           </Link>

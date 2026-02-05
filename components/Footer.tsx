@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3D2B1F] text-gray-300 mt-16 font-serif">
-      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-30 ">
+    <footer className="bg-[#3D2B1F] text-gray-300  font-serif">
+      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-30 gap-5 ">
 
         {/* brand */}
         <div>
@@ -36,8 +36,8 @@ export default function Footer() {
           <h5 className="text-white text-sm font-semibold uppercase tracking-widest mb-3">Contact Us</h5>
           <div className="space-y-2 text-sm">
             <p className="flex items-center gap-2"><MapPin size={15} className="text-[#C4956A] shrink-0" /> Turner Road, Near ISBT Deshradun, Uttarakhand, India</p>
-            <p className="flex items-center gap-2"><Phone size={15} className="text-[#C4956A] shrink-0" /> +91 7668394656</p>
-            <p className="flex items-center gap-2"><Mail  size={15} className="text-[#C4956A] shrink-0" /> hello@keranastore.in</p>
+            <a href="tel:+91 7668394656" className="flex items-center gap-2"><Phone size={15} className="text-[#C4956A] shrink-0" /> +91 7668394656</a>
+            <a href="mailto:chauhanleathers@gmail.com" className="flex items-center gap-2"><Mail  size={15} className="text-[#C4956A] shrink-0" />chauhanleathers@gmail.com</a>
           </div>
         </div>
       </div>

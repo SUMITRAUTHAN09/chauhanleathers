@@ -1,14 +1,11 @@
 "use client";
+import { Product } from "@/data/products";
 import { Gem } from "lucide-react";
 import Link from "next/link";
 
-import { Product } from "@/data/products";
-
-export default function ProductCard({ product, delay = 0 }: { product: Product; delay?: number }) {
-  
-
+export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className={` font-serif ks-card fade-up delay-${delay} group relative flex flex-col border-2 rounded-2xl shadow shadow-lg shadow-black max-w-7xl`}>
+    <div className="font-serif group relative flex flex-col bg-white border-2 border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl hover:border-[#C4956A] transition-all duration-300 shadow-xl shadow-gray-600">
       {/* redeemable badge */}
       {product.redeemable && (
         <span className="absolute top-3 left-3 z-10 bg-amber-100 border border-amber-200 text-amber-700 text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
@@ -17,7 +14,7 @@ export default function ProductCard({ product, delay = 0 }: { product: Product; 
       )}
 
       {/* image wrapper */}
-      <Link href={`/products/${product.id}`} className="overflow-hidden rounded-t-2xl">
+      <Link href={`/products/${product.id}`} className="block overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
@@ -26,21 +23,29 @@ export default function ProductCard({ product, delay = 0 }: { product: Product; 
       </Link>
 
       {/* body */}
-      <div className="p-4 flex flex-col flex-1 ">
-        <span className="text-xs font-medium text-[#C4956A] uppercase tracking-wide">{product.category}</span>
-        <Link href={`/products/${product.id}`}>
-          <h3 className="font-semibold text-[#3D2B1F] mt-0.5 group-hover:text-[#C4956A] transition-colors leading-snug">
+      <div className="p-4 flex flex-col flex-1 bg-white ">
+        <span className="text-xs font-medium text-[#C4956A] uppercase tracking-wide">
+          {product.category}
+        </span>
+        <Link href={`/products/${product.id}`} className="block mt-0.5">
+          <h3 className="font-semibold text-[#3D2B1F] group-hover:text-[#C4956A] transition-colors leading-snug">
             {product.name}
           </h3>
         </Link>
-        <p className="text-xs text-gray-500 mt-1 line-clamp-2">{product.description}</p>
+        <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+          {product.description}
+        </p>
 
         {/* price row */}
         <div className="mt-auto pt-3 flex items-end justify-between">
           <div>
-            <span className="text-lg font-bold text-[#3D2B1F]">₹{product.price}</span>
+            <span className="text-lg font-bold text-[#3D2B1F]">
+              ₹{product.price}
+            </span>
             {product.redeemable && (
-              <span className="block text-xs text-gray-400 mt-0.5">or {product.tokenPrice} tokens</span>
+              <span className="block text-xs text-red-400 mt-0.5 line-through">
+                ₹{product.price + 500}
+              </span>
             )}
           </div>
         </div>
