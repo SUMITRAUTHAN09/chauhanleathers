@@ -14,7 +14,7 @@ export const products: Product[] = [
     id: "1",
     name: "Premium Croc-Texture Leather Belt & Wallet Set",
     category: "Accessories",
-    price: 1899,
+    price: 1199,
     image: "/belts/combo_.png",
     description:
       "A premium gift set featuring a crocodile-textured genuine leather belt and matching wallet. Ideal for formal and semi-formal wear.",
@@ -36,7 +36,7 @@ export const products: Product[] = [
     id: "3",
     name: "Black Leather Minimal Stitch Belt",
     category: "Accessories",
-    price: 899,
+    price: 650,
     image: "/belts/black_plain_belt.png",
     description:
       "Minimalist black leather belt with contrast stitching and durable buckle, suitable for daily formal use.",
@@ -69,7 +69,7 @@ export const products: Product[] = [
     id: "6",
     name: "Floral Embossed Western Leather Belt",
     category: "Accessories",
-    price: 1599,
+    price: 559,
     image: "/belts/cobra_.png",
     description:
       "Western-style leather belt with detailed floral embossing and antique gold-finish buckle.",
@@ -80,7 +80,7 @@ export const products: Product[] = [
     id: "7",
     name: "Black Designer Buckle Leather Belt",
     category: "Accessories",
-    price: 1399,
+    price: 669,
     image: "/belts/bhakal.png",
     description:
       "Stylish black leather belt with engraved metallic buckle, perfect for premium casual wear.",
@@ -159,7 +159,7 @@ export const products: Product[] = [
     id: "11",
     name: "Croc Texture Chain Handbag",
     category: "Fashion",
-    price: 1899,
+    price: 2299,
 
     image: "/bags/Croc_Texture_Chain_Handbag.png",
     description:
@@ -171,7 +171,7 @@ export const products: Product[] = [
     id: "12",
     name: "Classic Ostrich Pattern Tote",
     category: "Fashion",
-    price: 2199,
+    price: 2399,
 
     image: "/bags/Classic_Ostrich_Pattern_Tote.png",
     description:
@@ -183,7 +183,7 @@ export const products: Product[] = [
     id: "13",
     name: "Vintage Croc Top Handle Bag",
     category: "Fashion",
-    price: 1999,
+    price: 2199,
     image: "/bags/Vintage_Croc_Top_Handle_Bag.png",
     description:
       "Vintage-inspired handbag with a bold croc pattern and metallic detailing. Designed for a sophisticated look while keeping essentials organized.",
@@ -194,7 +194,7 @@ export const products: Product[] = [
     id: "14",
     name: "Luxury Chain Shoulder Bag",
     category: "Fashion",
-    price: 1750,
+    price: 1999,
 
     image: "/bags/Luxury_Chain_Shoulder_Bag.png",
     description:
@@ -276,7 +276,7 @@ export const products: Product[] = [
   image: "/G_Bags/bag7.png",
   description:
     "Statement travel duffle bag crafted with genuine leather and hair-on hide. Spacious, rugged, and perfect for short trips.",
-  redeemable: false,
+  redeemable: true,
   stock: 3,
 },
 ];

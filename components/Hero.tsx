@@ -89,7 +89,7 @@ export default function Hero() {
 
             <motion.div variants={{ hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1 } }}>
               <a
-                href="tel:+91 7668394656"
+                href="tel:7668394656"
                 className="flex items-center gap-2 border border-white/40 text-white font-medium px-6 py-2.5 rounded-xl hover:bg-white/10 transition-all"
               >
                 <Phone size={18} /> Contact Us
@@ -122,7 +122,7 @@ export default function Hero() {
               transition: { staggerChildren: 0.15 },
             },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2"
         >
           {products.slice(0, 6).map((p, i) => (
             <motion.div

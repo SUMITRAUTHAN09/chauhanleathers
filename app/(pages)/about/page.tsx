@@ -32,7 +32,10 @@ export default function AboutPage() {
       </section>
 
       {/* ABOUT CONTENT */}
-      <section className="py-20 px-6 md:px-16">
+      <section className="py-20 px-3 md:px-16">
+        <h2 className="display text-4xl font-bold text-[#3D2B1F] text-center mb-5">
+              Aditya Chauhan
+            </h2>
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
 
           {/* IMAGE SECTION */}
@@ -43,9 +46,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="rounded-4xl overflow-hidden shadow-xl shadow-gray-400">
+            <div className="rounded-4xl overflow-hidden shadow-xl shadow-gray-600">
               <Image
-                src="/client_image.png" 
+                src="/client01.png" 
                 alt="Chauhan Leathers Owner"
                 width={300}
                 height={400}

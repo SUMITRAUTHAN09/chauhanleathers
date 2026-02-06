@@ -42,17 +42,17 @@ export default async function ProductDetail({
   return (
     <div className="bg-white min-h-screen font-serif">
       <Navbar />
-      <div className="max-w-7xl mx-auto py-8 m-12">
+      <div className="max-w-7xl mx-auto py-8 mb-15">
         <Link
           href="/products"
-          className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#C4956A] transition-colors mb-6"
+          className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#C4956A] transition-colors ml-2"
         >
           <ArrowLeft size={15} /> Back to Products
         </Link>
 
-        <div className="grid md:grid-cols-2 gap-10 m-5">
+        <div className="grid md:grid-cols-2 md:gap-10 m-2">
           {/* Single Product Image */}
-          <div className="ks-card overflow-hidden rounded-2xl border-2 shadow-lg">
+          <div className="ks-card overflow-hidden rounded-2xl border-2 shadow-lg shadow-gray-600 mb-5">
             <img
               src={product.image}
               alt={product.name}
@@ -117,14 +117,14 @@ export default async function ProductDetail({
                 href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
+                className="flex-1 bg-[#25D366] hover:bg-[#20BA5A] text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-gray-600"
               >
                 <MessageCircle size={20} />
                 Order on WhatsApp
               </a>
               <a
                 href={`tel:${displayPhone}`}
-                className="bg-[#C4956A] hover:bg-[#B08559] text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
+                className="bg-[#C4956A] hover:bg-[#B08559] text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 shadow-lg shadow-gray-600"
               >
                 <Phone size={20} />
                 Call
@@ -132,7 +132,7 @@ export default async function ProductDetail({
             </div>
 
             {/* Contact Info */}
-            <div className="mt-4 text-center text-sm text-gray-500">
+            <div className="mt-4 text-center text-sm text-gray-500 mt-8">
               <p>Or call us directly at <a href={`tel:${displayPhone}`} className="text-[#C4956A] hover:underline font-semibold">{displayPhone}</a></p>
             </div>
           </div>

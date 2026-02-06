@@ -77,7 +77,7 @@ export default function ProductsPage() {
         {filtered.length > 0 ? (
           <div
             key={`${cat}-${query}`}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 pb-24 sm:pb-20"
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-6 pb-24 sm:pb-20"
           >
             {filtered.map((p) => (
               <div key={p.id}>
