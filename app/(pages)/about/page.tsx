@@ -49,7 +49,7 @@ export default function AboutPage() {
           >
             <div className="rounded-4xl overflow-hidden shadow-xl shadow-gray-600">
               <Image
-                src="/client01.png"
+                src="/client.PNG"
                 alt="Chauhan Leathers Owner"
                 width={300}
                 height={400}
