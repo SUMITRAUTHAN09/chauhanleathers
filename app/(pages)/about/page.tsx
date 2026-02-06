@@ -8,10 +8,11 @@ import { MessageCircle, Phone } from "lucide-react";
 import Image from "next/image";
 
 export default function AboutPage() {
-   const phoneNumber = "+91 7668394656"; // Example: 91 for India + 10 digit number
+  const phoneNumber = "917668394656"; // country code + number (no spaces)
   const whatsappMessage = "Hello! I'm interested in your leather products.";
+
   return (
-    <div className="bg-white font-serif">
+    <div className="w-full bg-white font-serif overflow-x-hidden">
       <Navbar />
 
       {/* HERO SECTION */}
@@ -32,12 +33,12 @@ export default function AboutPage() {
       </section>
 
       {/* ABOUT CONTENT */}
-      <section className="py-20 px-3 md:px-16">
+      <section className="py-20 px-3 md:px-16 overflow-x-hidden">
         <h2 className="display text-4xl font-bold text-[#3D2B1F] text-center mb-5">
-              Aditya Chauhan
-            </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          Aditya Chauhan
+        </h2>
 
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* IMAGE SECTION */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -48,16 +49,15 @@ export default function AboutPage() {
           >
             <div className="rounded-4xl overflow-hidden shadow-xl shadow-gray-600">
               <Image
-                src="/client01.png" 
+                src="/client01.png"
                 alt="Chauhan Leathers Owner"
                 width={300}
                 height={400}
-                className="object-cover w-full md:w-full h-[400] md:h-[600] flex items-center justify-center"
+                className="object-cover w-full h-[400px] md:h-[600px]"
               />
             </div>
 
-            {/* Decorative accent */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D4A843]/20 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D4A843]/20 rounded-full blur-2xl" />
           </motion.div>
 
           {/* TEXT SECTION */}
@@ -88,66 +88,69 @@ export default function AboutPage() {
               confidence, style, and character.
             </p>
           </motion.div>
-
         </div>
       </section>
 
       {/* VALUES SECTION */}
-      <section className=" max-w-9xl md:ml-10 bg-gray-50 md:flex md:flex-cols justify-center items-center">
-        
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto md:ml-100"
+      <section className="w-full bg-gray-50 py-20 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 md:flex md:gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="w-full"
           >
-          <h2 className="display text-3xl font-bold text-center text-[#3D2B1F] mt-8">
-            What We Stand For
-          </h2>
+            <h2 className="display text-3xl font-bold text-center text-[#3D2B1F]">
+              What We Stand For
+            </h2>
 
-          <div className="flex flex-col gap-5 mt-12 ">
-            {[
-              {
-                title: "Premium Quality",
-                desc: "Only high-grade leather and materials are used in every product.",
-              },
-              {
-                title: "Skilled Craftsmanship",
-                desc: "Each item is carefully crafted by experienced artisans.",
-              },
-              {
-                title: "Customer Trust",
-                desc: "We focus on long-term relationships built on honesty and value.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-4xl shadow-lg shadow-gray-400 text-center"
-              >
-                <h3 className="font-semibold text-lg text-[#3D2B1F]">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm mt-2">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-        <ResponsiveImageSection/>
+            <div className="flex flex-col gap-5 mt-12">
+              {[
+                {
+                  title: "Premium Quality",
+                  desc: "Only high-grade leather and materials are used in every product.",
+                },
+                {
+                  title: "Skilled Craftsmanship",
+                  desc: "Each item is carefully crafted by experienced artisans.",
+                },
+                {
+                  title: "Customer Trust",
+                  desc: "We focus on long-term relationships built on honesty and value.",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.15 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-6 rounded-4xl shadow-lg shadow-gray-400 text-center"
+                >
+                  <h3 className="font-semibold text-lg text-[#3D2B1F]">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-2">
+                    {item.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <ResponsiveImageSection />
+        </div>
       </section>
 
       <Footer />
-       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-        {/* WhatsApp Button */}
+
+      {/* FLOATING ACTION BUTTONS */}
+      <div className="fixed bottom-12 right-4 flex flex-col gap-3 z-50">
         <a
-          href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+          href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            whatsappMessage
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
           className="group bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -156,7 +159,6 @@ export default function AboutPage() {
           <MessageCircle size={24} className="group-hover:animate-pulse" />
         </a>
 
-        {/* Phone Button */}
         <a
           href={`tel:+${phoneNumber}`}
           className="group bg-[#C4956A] hover:bg-[#B08559] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"

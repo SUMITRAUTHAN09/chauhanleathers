@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3D2B1F] text-gray-300  font-serif mb-[-2]">
+    <footer className="bg-[#3D2B1F] text-gray-300  font-serif">
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-30 gap-5 ">
 
         {/* brand */}
@@ -43,8 +43,11 @@ export default function Footer() {
       </div>
 
       {/* bottom bar */}
-      <div className=" flex justify-between border-t border-gray-700 m-2 mb-[-2] py-4 text-center text-xs text-gray-500">
-        © 2026 Chauhan Leathers. All rights reserved. <a href="/" className="hover:text-blue-700">SumNex Tech</a>
+      <div className="max-w-7xl  flex items-center justify-between border-t border-gray-700 py-4 text-center text-xs text-gray-500">
+        © 2026 Chauhan Leathers. All rights reserved. <span>Created by:<a href="https://sumnex.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-blue-700">SumNex Tech</a></span>
       </div>
     </footer>
   );

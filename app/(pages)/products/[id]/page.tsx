@@ -137,27 +137,6 @@ export default async function ProductDetail({
             </div>
           </div>
         </div>
-
-        {/* Floating Action Buttons */}
-        <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-          <a
-            href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-            aria-label="Order on WhatsApp"
-          >
-            <MessageCircle size={24} className="group-hover:animate-pulse" />
-          </a>
-
-          <a
-            href={`tel:${displayPhone}`}
-            className="group bg-[#C4956A] hover:bg-[#B08559] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-            aria-label="Call us"
-          >
-            <Phone size={24} className="group-hover:animate-pulse" />
-          </a>
-        </div>
       </div>
       <Footer />
     </div>

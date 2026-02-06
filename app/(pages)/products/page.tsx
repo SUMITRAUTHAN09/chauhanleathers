@@ -98,7 +98,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col gap-3 z-50">
+      <div className="fixed bottom-12 right-2 sm:bottom-6 sm:right-6 flex flex-col gap-3 z-50">
         
         {/* WhatsApp Button */}
         <a

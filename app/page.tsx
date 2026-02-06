@@ -19,7 +19,7 @@ export default function Home() {
       </main>
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+      <div className="fixed bottom-12 right-2 flex flex-col gap-3 z-50">
         {/* WhatsApp Button */}
         <a
           href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`}
